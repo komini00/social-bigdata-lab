@@ -494,7 +494,7 @@
                     
                     <div class="contact-form">
                         <h3>빠른 문의</h3>
-                        <form class="inquiry-form">
+                        <form class="inquiry-form" action="https://formspree.io/f/xpwjkpra" method="POST">
                             <div class="form-group">
                                 <label for="name">이름</label>
                                 <input type="text" id="name" name="name" required>
@@ -520,6 +520,11 @@
                                 <label for="message">문의 내용</label>
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
+                            
+                            <!-- Formspree 숨겨진 필드 -->
+                            <input type="hidden" name="_replyto" value="">
+                            <input type="hidden" name="_subject" value="SDA Lab 웹사이트 문의">
+                            <input type="hidden" name="_next" value="https://komini00.github.io/social-bigdata-lab">
                             
                             <button type="submit" class="btn-submit">문의 보내기</button>
                         </form>
