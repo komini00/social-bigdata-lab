@@ -1,0 +1,226 @@
+/* ===== 접근성 테마 ===== */
+
+/* 글자 크기 변경 */
+.font-small {
+    font-size: 14px;
+}
+
+.font-small .container {
+    font-size: 0.875rem;
+}
+
+.font-small h1 { font-size: 2rem; }
+.font-small h2 { font-size: 1.75rem; }
+.font-small h3 { font-size: 1.25rem; }
+.font-small h4 { font-size: 1.125rem; }
+
+.font-large {
+    font-size: 18px;
+}
+
+.font-large .container {
+    font-size: 1.125rem;
+}
+
+.font-large h1 { font-size: 3rem; }
+.font-large h2 { font-size: 2.5rem; }
+.font-large h3 { font-size: 1.75rem; }
+.font-large h4 { font-size: 1.5rem; }
+
+/* 다크 모드 */
+.theme-dark {
+    --primary-black: #ffffff;
+    --primary-white: #1a1a1a;
+    --primary-gray: #2d2d2d;
+    --secondary-gray: #404040;
+    --text-gray: #cccccc;
+    --light-gray: #333333;
+    --accent-blue: #4da6ff;
+    --accent-hover: #66b3ff;
+}
+
+.theme-dark .header {
+    background-color: var(--primary-white);
+    border-bottom-color: var(--secondary-gray);
+}
+
+.theme-dark .accessibility-panel {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .panel-content {
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+}
+
+.theme-dark .hero-section {
+    background-color: var(--light-gray);
+}
+
+.theme-dark .slide-info {
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+    color: var(--primary-white);
+}
+
+.theme-dark .quick-search {
+    background-color: var(--primary-gray);
+}
+
+.theme-dark .search-box input {
+    background-color: var(--light-gray);
+    color: var(--primary-black);
+}
+
+.theme-dark .keyword {
+    background-color: var(--light-gray);
+    color: var(--primary-black);
+}
+
+.theme-dark .keyword:hover {
+    background-color: var(--accent-blue);
+    color: var(--primary-white);
+}
+
+.theme-dark .exhibition-card,
+.theme-dark .collection-item,
+.theme-dark .education-card {
+    background-color: var(--light-gray);
+}
+
+.theme-dark .education-section {
+    background-color: var(--primary-gray);
+}
+
+.theme-dark .news-item a:hover {
+    background-color: var(--light-gray);
+}
+
+.theme-dark .footer {
+    background-color: #0d0d0d;
+}
+
+/* 고대비 모드 */
+.theme-high-contrast {
+    --primary-black: #ffffff;
+    --primary-white: #000000;
+    --primary-gray: #000000;
+    --secondary-gray: #ffffff;
+    --text-gray: #ffffff;
+    --light-gray: #000000;
+    --accent-blue: #ffff00;
+    --accent-red: #ff0000;
+    --accent-hover: #ffff99;
+}
+
+.theme-high-contrast * {
+    border-color: var(--secondary-gray) !important;
+    box-shadow: none !important;
+}
+
+.theme-high-contrast .header {
+    background-color: var(--primary-white);
+    border: 2px solid var(--secondary-gray);
+}
+
+.theme-high-contrast .btn-primary,
+.theme-high-contrast .search-box button {
+    background-color: var(--accent-blue);
+    color: var(--primary-white);
+    border: 2px solid var(--secondary-gray);
+}
+
+.theme-high-contrast .btn-more {
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+    border: 2px solid var(--secondary-gray);
+}
+
+.theme-high-contrast .exhibition-card,
+.theme-high-contrast .collection-item,
+.theme-high-contrast .education-card {
+    background-color: var(--primary-white);
+    border: 2px solid var(--secondary-gray);
+}
+
+.theme-high-contrast .quick-search {
+    background-color: var(--primary-white);
+    border: 2px solid var(--secondary-gray);
+}
+
+.theme-high-contrast .education-section {
+    background-color: var(--primary-white);
+}
+
+.theme-high-contrast .footer {
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+    border: 2px solid var(--secondary-gray);
+}
+
+.theme-high-contrast a:focus,
+.theme-high-contrast button:focus,
+.theme-high-contrast input:focus {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* 애니메이션 비활성화 (접근성) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 고대비 선호 설정 */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-black: #000000;
+        --primary-white: #ffffff;
+        --accent-blue: #0000ff;
+    }
+}
+
+/* 다크 모드 선호 설정 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-black: #ffffff;
+        --primary-white: #1a1a1a;
+        --primary-gray: #2d2d2d;
+        --secondary-gray: #404040;
+        --text-gray: #cccccc;
+        --light-gray: #333333;
+    }
+}
+
+/* 포커스 관리 */
+.focus-outline {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* 스크린 리더 전용 */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* 키보드 네비게이션 */
+.keyboard-user button:focus,
+.keyboard-user a:focus,
+.keyboard-user input:focus,
+.keyboard-user [tabindex]:focus {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 2px;
+}
