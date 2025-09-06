@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소셜 빅데이터 분석 랩 - Social Big Data Analytics Lab</title>
+    
+    <!-- SEO 메타태그 -->
+    <meta name="description" content="동국대학교 소셜 빅데이터 분석 랩(SDA Lab) - 텍스트 마이닝과 AI 기술로 빅데이터에 숨겨진 패턴과 의미를 분석합니다.">
+    <meta name="keywords" content="빅데이터, 텍스트마이닝, 소셜분석, 동국대학교, 고민환교수, ESG분석, 항공관광">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="소셜 빅데이터 분석 랩">
+    <meta property="og:description" content="세상의 텍스트에서 트렌드와 인사이트를 발굴합니다">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sda-lab.dongguk.ac.kr">
+    
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="assets/css/lab-style.css">
+    <link rel="stylesheet" href="assets/css/accessibility.css">
+    
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 접근성: 본문 바로가기 -->
+    <a href="#main-content" class="skip-link">본문 바로가기</a>
+    
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="container">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="/">
+                    <div class="logo-text">
+                        <h1>SDA Lab</h1>
+                        <span>Social Big Data Analytics</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 메인 네비게이션 -->
+            <nav class="main-nav" aria-label="주요 메뉴">
+                <ul class="nav-list">
+                    <li><a href="#about">연구실 소개</a></li>
+                    <li><a href="#research">연구 분야</a></li>
+                    <li><a href="#achievements">주요 성과</a></li>
+                    <li><a href="#consulting">분석 자문</a></li>
+                    <li><a href="#news">소식</a></li>
+                </ul>
+            </nav>
+            
+            <!-- 유틸리티 메뉴 -->
+            <div class="header-utils">
+                <button class="accessibility-btn" aria-label="접근성 설정 열기">
+                    <span class="sr-only">접근성 설정</span>
+                    ⚙️
+                </button>
+                <button class="lang-toggle" aria-label="언어 변경">
+                    <span>KOR</span>
+                </button>
+                <div class="contact-info">
+                    <a href="mailto:komini00@dongguk.ac.kr" class="btn-contact">연구실 문의</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="모바일 메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 접근성 설정 패널 -->
+    <div class="accessibility-panel" id="accessibility-panel" hidden>
+        <div class="panel-content">
+            <h2>접근성 설정</h2>
+            <p>아래 옵션을 조정하여 편안한 탐색 환경을 만들어보세요.</p>
+            
+            <div class="setting-group">
+                <h3>글자 크기</h3>
+                <div class="font-size-controls">
+                    <button class="font-btn" data-size="small">작게</button>
+                    <button class="font-btn active" data-size="medium">보통</button>
+                    <button class="font-btn" data-size="large">크게</button>
+                </div>
+            </div>
+            
+            <div class="setting-group">
+                <h3>테마 선택</h3>
+                <div class="theme-controls">
+                    <button class="theme-btn active" data-theme="default">기본</button>
+                    <button class="theme-btn" data-theme="dark">다크모드</button>
+                    <button class="theme-btn" data-theme="high-contrast">고대비모드</button>
+                </div>
+            </div>
+            
+            <button class="panel-close" aria-label="설정 패널 닫기">✕</button>
+        </div>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <main id="main-content" class="main-content">
+        
+        <!-- 히어로 섹션 -->
+        <section class="hero-section" aria-label="연구실 소개">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>소셜 빅데이터 분석 랩</h2>
+                    <p class="hero-subtitle">Social Big Data Analytics Lab</p>
+                    <p class="hero-description">
+                        <strong>세상의 텍스트에서 트렌드와 인사이트를 발굴합니다.</strong><br>
+                        텍스트 마이닝과 AI 기술로 빅데이터에 숨겨진 패턴과 의미를 과학적으로 분석하여<br>
+                        항공·관광·서비스 산업의 당면 과제를 해결하고 새로운 사회적 가치를 실현합니다.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#about" class="btn-primary">연구실 둘러보기</a>
+                        <a href="#consulting" class="btn-secondary">분석 자문 문의</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="data-visualization">
+                        <div class="data-node active">소셜미디어</div>
+                        <div class="data-node">온라인리뷰</div>
+                        <div class="data-node">뉴스기사</div>
+                        <div class="data-node highlight">AI 분석</div>
+                        <div class="data-node">인사이트</div>
+                        <div class="data-node">트렌드</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 연구실 소개 섹션 -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>연구실 소개</h2>
+                    <span class="section-subtitle">Lab Introduction</span>
+                </div>
+                
+                <div class="about-content">
+                    <div class="welcome-message">
+                        <h3>소셜 빅데이터 분석 랩(SDA Lab)에 오신 것을 환영합니다.</h3>
+                        <p>
+                            우리는 고객의 목소리, 사회의 트렌드, 산업의 미래가 담긴 데이터의 바다에 살고 있습니다. 
+                            특히 소셜 미디어, 온라인 리뷰, 뉴스 기사 등 비정형 텍스트 데이터는 과거에는 분석하기 어려웠던 
+                            사람들의 생생한 인식과 감성을 담고 있는 보고(寶庫)입니다.
+                        </p>
+                        <p>
+                            저희 연구실은 최신 텍스트 마이닝과 AI 기술을 활용하여 이러한 빅데이터에 숨겨진 패턴과 의미를 
+                            과학적으로 분석하는 연구에 집중하고 있습니다. 저희의 연구는 항공, 관광, 서비스 산업의 당면 과제를 해결하고, 
+                            ESG 경영과 같은 새로운 사회적 가치를 실현하는 데 필요한 데이터 기반의 통찰력을 제공하는 것을 목표로 합니다.
+                        </p>
+                        <p>
+                            학문적 깊이와 실용적 가치를 연결하는 저희 연구 여정에 여러분의 많은 관심과 참여를 기대합니다.
+                        </p>
+                        <p class="signature"><strong>연구 책임자 고민환 교수 드림</strong></p>
+                    </div>
+                    
+                    <!-- 연구진 소개 -->
+                    <div class="team-section">
+                        <h3>연구진</h3>
+                        <div class="team-grid">
+                            <div class="member-card director">
+                                <div class="member-photo">
+                                    <img src="assets/images/team/prof-ko.jpg" alt="고민환 교수" loading="lazy">
+                                </div>
+                                <div class="member-info">
+                                    <h4>고민환 교수</h4>
+                                    <p class="position">연구 책임자 (Prof. Min-hwan Ko)</p>
+                                    <div class="member-details">
+                                        <p><strong>소속:</strong> 동국대학교 WISE캠퍼스 항공서비스무역학과</p>
+                                        <p><strong>학위:</strong> 경희대학교 관광학 박사</p>
+                                        <p><strong>이메일:</strong> <a href="mailto:komini00@dongguk.ac.kr">komini00@dongguk.ac.kr</a></p>
+                                        <p><strong>연구실:</strong> 진흥관 3층 (054-770-2311)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="member-card">
+                                <div class="member-photo">
+                                    <img src="assets/images/team/dr-park.jpg" alt="박현아 박사" loading="lazy">
+                                </div>
+                                <div class="member-info">
+                                    <h4>박현아 박사</h4>
+                                    <p class="position">전임연구원</p>
+                                    <div class="member-details">
+                                        <p><strong>관심 분야:</strong> 호텔관광 분야 고객 경험 분석, 서비스 품질 측정</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="member-card">
+                                <div class="member-photo">
+                                    <img src="assets/images/team/lee-jinwoo.jpg" alt="이진우" loading="lazy">
+                                </div>
+                                <div class="member-info">
+                                    <h4>이진우</h4>
+                                    <p class="position">석사과정</p>
+                                    <div class="member-details">
+                                        <p><strong>관심 분야:</strong> 항공사 ESG 경영 관련 온라인 인식 분석</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 연구 분야 섹션 -->
+        <section class="research-section" id="research">
+            <div class="container">
+                <div class="section-header">
+                    <h2>연구 분야</h2>
+                    <span class="section-subtitle">Research Areas</span>
+                </div>
+                
+                <p class="research-intro">
+                    저희 연구실은 텍스트 마이닝과 의미연결망 분석(Semantic Network Analysis)을 핵심 방법론으로 하여 다음과 같은 연구를 수행합니다.
+                </p>
+                
+                <div class="research-grid">
+                    <div class="research-card">
+                        <div class="card-icon">
+                            <span>📊</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>소비자 인식 및 트렌드 분석</h3>
+                            <p>
+                                소셜 미디어 및 온라인 리뷰 데이터를 활용하여 특정 브랜드, 제품, 서비스 또는 
+                                사회적 이슈(ChatGPT, ESG 등)에 대한 대중의 인식을 분석하고 변화를 추적합니다.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">소셜미디어분석</span>
+                                <span class="tag">브랜드인식</span>
+                                <span class="tag">트렌드추적</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <div class="card-icon">
+                            <span>✈️</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>항공/관광 산업 분석</h3>
+                            <p>
+                                항공사 및 공항 서비스 품질, 친환경 경영, 포스트 코로나 시대의 관광 트렌드, 
+                                지역 축제 등에 대한 빅데이터 기반의 심층 분석을 수행합니다.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">항공서비스</span>
+                                <span class="tag">관광트렌드</span>
+                                <span class="tag">ESG경영</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <div class="card-icon">
+                            <span>🤖</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>하이브리드 추천 시스템 개발</h3>
+                            <p>
+                                사용자의 감성 반응 데이터와 협업 필터링 기술을 결합하여 
+                                개인 맞춤형 서비스 및 상품 추천 알고리즘을 연구합니다.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">감성분석</span>
+                                <span class="tag">추천시스템</span>
+                                <span class="tag">개인화</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 주요 성과 섹션 -->
+        <section class="achievements-section" id="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <h2>주요 성과</h2>
+                    <span class="section-subtitle">Projects & Publications</span>
+                </div>
+                
+                <div class="achievements-content">
+                    <!-- 주요 연구 프로젝트 -->
+                    <div class="achievement-category">
+                        <h3>주요 연구 프로젝트</h3>
+                        <div class="project-card featured">
+                            <div class="project-header">
+                                <h4>크루즈 관광객의 온라인 리뷰 데이터를 활용한 감성 분석과 협업 필터링 기반 하이브리드 추천 시스템 개발</h4>
+                                <span class="project-badge">진행중</span>
+                            </div>
+                            <div class="project-details">
+                                <p class="project-funding">
+                                    <strong>지원 기관:</strong> 교육부, 한국연구재단 (2025 인문사회 신진연구자 지원사업)
+                                </p>
+                                <p class="project-description">
+                                    관광객의 리뷰에 담긴 감성을 AI로 분석하고, 이를 바탕으로 개인의 취향에 맞는 
+                                    맞춤형 관광 상품 및 서비스를 추천하는 시스템을 개발합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 대표 논문 및 저서 -->
+                    <div class="achievement-category">
+                        <h3>대표 논문 및 저서</h3>
+                        <div class="publications-list">
+                            <div class="publication-item award">
+                                <div class="publication-type">논문</div>
+                                <div class="publication-content">
+                                    <h4>빅데이터 분석으로 확인한 일반인의 항공사 친환경 ESG 경영 인식이 기업명성, 태도 및 고객시민행동에 미치는 영향: SOR 모형 적용</h4>
+                                    <p class="publication-award">🏆 한국항공경영학회 최우수 논문상 수상</p>
+                                </div>
+                            </div>
+                            
+                            <div class="publication-item">
+                                <div class="publication-type">논문</div>
+                                <div class="publication-content">
+                                    <h4>텍스트 마이닝 분석을 통한 한국 대중의 ChatGPT에 대한 인식 탐색에 대한 연구</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="publication-item">
+                                <div class="publication-type">논문</div>
+                                <div class="publication-content">
+                                    <h4>빅데이터 기반의 김해공항 관련 텍스트마이닝: 코로나 이전과 이후의 비교를 중심으로</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="publication-item book">
+                                <div class="publication-type">저서</div>
+                                <div class="publication-content">
+                                    <h4>Chat GPT와 함께하는 대학생활</h4>
+                                    <p class="publication-award">📚 한국대학출판협회 2024 올해의 우수도서 선정</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 분석 자문 섹션 -->
+        <section class="consulting-section" id="consulting">
+            <div class="container">
+                <div class="section-header">
+                    <h2>분석 자문</h2>
+                    <span class="section-subtitle">Consulting Services</span>
+                </div>
+                
+                <div class="consulting-content">
+                    <div class="consulting-intro">
+                        <p>저희 연구실은 축적된 빅데이터 분석 전문성을 바탕으로 기업과 기관의 데이터 기반 의사결정을 지원합니다.</p>
+                    </div>
+                    
+                    <div class="consulting-services">
+                        <h3>자문 분야</h3>
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon">🔍</div>
+                                <h4>온라인 평판 및 인식 분석</h4>
+                                <p>기업, 기관, 브랜드의 온라인 평판을 정량적/정성적으로 분석하고 위기 요인을 진단합니다.</p>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">🚀</div>
+                                <h4>신규 서비스/상품 타당성 검토</h4>
+                                <p>출시 전후 시장 반응을 예측하고 고객의 잠재 수요 및 개선점을 빅데이터 분석을 통해 도출합니다.</p>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">🌱</div>
+                                <h4>ESG 경영 전략 컨설팅</h4>
+                                <p>언론보도, 소셜 데이터 분석을 통해 자사 및 경쟁사의 ESG 활동에 대한 대중의 인식을 파악하고 전략 방향을 제시합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 성공 사례 -->
+                    <div class="case-study">
+                        <h3>성공 사례</h3>
+                        <div class="case-card">
+                            <div class="case-header">
+                                <h4>(주)에어링크 항공 ESG 캠페인 분석 자문</h4>
+                                <span class="case-type">브랜드 인식 분석</span>
+                            </div>
+                            
+                            <div class="case-content">
+                                <div class="case-challenge">
+                                    <h5>도전 과제</h5>
+                                    <p>친환경 신규 기종 도입 및 ESG 캠페인 진행 후, 막대한 투자에도 불구하고 기업 이미지 개선 효과가 기대에 미치지 못하는 문제 발생.</p>
+                                </div>
+                                
+                                <div class="case-process">
+                                    <h5>분석 과정</h5>
+                                    <ul>
+                                        <li>최근 1년간 뉴스 댓글, 항공 커뮤니티, SNS에 언급된 '에어링크' 및 경쟁사 관련 데이터 <strong>20만 건</strong> 분석</li>
+                                        <li>의미연결망 분석 결과, '에어링크'는 '친환경' 키워드보다 '가격', '지연' 등 운항 관련 키워드와 더 강하게 연결</li>
+                                        <li>경쟁사는 '친환경'이 '캠페인', '사회공헌' 등 긍정적 활동과 연결된 반면, 에어링크는 '광고', '보여주기' 등 부정적 인식과 함께 등장</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="case-result">
+                                    <h5>자문 내용 및 결과</h5>
+                                    <p>단순한 기술 도입 홍보를 넘어, 고객이 체감할 수 있는 '친환경 캠페인'의 필요성을 제언하고, 
+                                    '정시성'과 '안전'을 '효율적인 자원 사용'이라는 ESG 메시지와 연결하는 커뮤니케이션 전략을 제시했습니다.</p>
+                                    <div class="case-impact">
+                                        <strong>결과: 친환경 마일리지 프로모션 진행 후 3개월 만에 온라인 내 '친환경' 관련 긍정 언급량 40% 증가</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 소식 섹션 -->
+        <section class="news-section" id="news">
+            <div class="container">
+                <div class="section-header">
+                    <h2>소식</h2>
+                    <span class="section-subtitle">Latest News</span>
+                </div>
+                
+                <div class="news-grid">
+                    <article class="news-card award">
+                        <div class="news-badge">연구 선정</div>
+                        <div class="news-date">2025.06.26</div>
+                        <h3>고민환 교수, 2025년도 인문사회 신진연구자 지원사업 최종 선정</h3>
+                        <p>교육부와 한국연구재단에서 주관하는 인문사회 신진연구자 지원사업에 최종 선정되어 크루즈 관광 추천시스템 연구를 수행합니다.</p>
+                    </article>
+                    
+                    <article class="news-card book">
+                        <div class="news-badge">도서 선정</div>
+                        <div class="news-date">2025.05.16</div>
+                        <h3>저서 「Chat GPT와 함께하는 대학생활」, 한국대학출판협회 '2024 올해의 우수도서' 선정</h3>
+                        <p>AI 시대 대학생들을 위한 실용적 가이드북이 우수도서로 선정되어 전국 대학도서관에 배포됩니다.</p>
+                    </article>
+                    
+                    <article class="news-card award">
+                        <div class="news-badge">수상</div>
+                        <div class="news-date">2023.02.22</div>
+                        <h3>고민환 교수, 한국항공경영학회 2022 추계학술대회 최우수 논문상 수상</h3>
+                        <p>항공사 ESG 경영에 대한 빅데이터 분석 연구로 학회 최우수 논문상을 수상했습니다.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 연락처 섹션 -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>연구실 문의</h2>
+                        <p>연구 협력, 분석 자문, 학술 교류에 대한 문의를 환영합니다.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <div>
+                                    <strong>이메일</strong>
+                                    <a href="mailto:komini00@dongguk.ac.kr">komini00@dongguk.ac.kr</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <div>
+                                    <strong>전화</strong>
+                                    <span>054-770-2311</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <div>
+                                    <strong>주소</strong>
+                                    <span>동국대학교 WISE캠퍼스 진흥관 3층<br>경상북도 경주시 동대로 123</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>빠른 문의</h3>
+                        <form class="inquiry-form">
+                            <div class="form-group">
+                                <label for="name">이름</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">이메일</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">문의 유형</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">선택해주세요</option>
+                                    <option value="research">연구 협력</option>
+                                    <option value="consulting">분석 자문</option>
+                                    <option value="academic">학술 교류</option>
+                                    <option value="other">기타</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">문의 내용</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">문의 보내기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <h3>SDA Lab</h3>
+                        <p>Social Big Data Analytics Lab</p>
+                        <p class="footer-tagline">세상의 텍스트에서 트렌드와 인사이트를 발굴합니다</p>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>연구실 정보</h4>
+                        <address>
+                            동국대학교 WISE캠퍼스<br>
+                            항공서비스무역학과<br>
+                            경상북도 경주시 동대로 123<br>
+                            진흥관 3층
+                        </address>
+                        <p>
+                            <strong>Tel:</strong> 054-770-2311<br>
+                            <strong>Email:</strong> <a href="mailto:komini00@dongguk.ac.kr">komini00@dongguk.ac.kr</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <h4>바로가기</h4>
+                        <ul>
+                            <li><a href="#about">연구실 소개</a></li>
+                            <li><a href="#research">연구 분야</a></li>
+                            <li><a href="#achievements">주요 성과</a></li>
+                            <li><a href="#consulting">분석 자문</a></li>
+                            <li><a href="#news">소식</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-external">
+                        <h4>관련 링크</h4>
+                        <ul>
+                            <li><a href="https://www.dongguk.ac.kr" target="_blank">동국대학교</a></li>
+                            <li><a href="https://wise.dongguk.ac.kr" target="_blank">WISE캠퍼스</a></li>
+                            <li><a href="https://www.nrf.re.kr" target="_blank">한국연구재단</a></li>
+                            <li><a href="https://www.moe.go.kr" target="_blank">교육부</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Social Big Data Analytics Lab. All rights reserved.</p>
+                    <div class="footer-policies">
+                        <button type="button">개인정보처리방침</button>
+                        <button type="button">이용약관</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 연결 -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/accessibility.js"></script>
+    <script src="assets/js/lab-features.js"></script>
+</body>
+</html>
