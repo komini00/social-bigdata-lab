@@ -1330,3 +1330,101 @@ section {
         font-size: 2rem;
     }
 }
+
+/* ===== 연구 업적 전체 보기 스타일 ===== */
+.view-more-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-view-more {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark-blue));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+}
+
+.btn-view-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+}
+
+.btn-view-more .arrow {
+    font-size: 0.875rem;
+    transition: transform 0.3s ease;
+}
+
+.full-list {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.publication-category {
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+.publication-category h4 {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.year-group {
+    margin-bottom: 2rem;
+}
+
+.year-group h5 {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-blue);
+    background: var(--light-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.year-group .publication-item {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-left: 2px solid var(--border-color);
+    padding-left: 1rem;
+}
+
+.year-group .publication-item:hover {
+    border-left-color: var(--primary-blue);
+}
+
+.note {
+    font-style: italic;
+    color: var(--text-gray);
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .btn-view-more {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .year-group .publication-item {
+        margin-left: 0.5rem;
+        padding-left: 0.75rem;
+    }
+}
